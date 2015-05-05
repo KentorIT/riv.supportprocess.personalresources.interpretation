@@ -75,11 +75,7 @@
   </xs:complexType>
   <xs:complexType name="BookingData">
     <xs:sequence>
-      <xs:element name="InterpretationLanguageId" type="xs:string">
-        <xs:annotation>
-          <xs:documentation>Currently integers, but may be replace with ISO codes in the future</xs:documentation>
-        </xs:annotation>
-      </xs:element>
+      <xs:element name="InterpretationLanguageId" type="xs:string"/>
       <xs:element name="Patient" type="tns:PatientInformation" minOccurs="0" maxOccurs="unbounded"/>
       <xs:element name="AuthorizationLevel" type="tns:AuthorizationLevelWithRequirement"/>
       <xs:element name="AdditionalRequirements" minOccurs="0" maxOccurs="unbounded">
@@ -184,6 +180,14 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
+      <xs:element name="OrderingPersonId">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="32"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
       <xs:element name="OrderingUnitName">
         <xs:simpleType>
           <xs:restriction base="xs:string">
@@ -216,11 +220,19 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
+      <xs:element name="Round">
+        <xs:simpleType>
+          <xs:restriction base="xs:int">
+            <xs:minInclusive value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
       <xs:element name="Occasions" type="tns:BookingOccasion" maxOccurs="unbounded"/>
       <xs:element name="Data" type="tns:BookingData"/>
       <xs:element name="InquiryState" type="tns:InquiryState"/>
       <xs:element name="LastResponseTime" type="xs:dateTime"/>
       <xs:element name="FirstInRank" type="xs:boolean"/>
+      <xs:element name="SameInterpreterRequiredForAllOccasions" type="xs:boolean"/>
       <xs:element name="InterpreterName" minOccurs="0">
         <xs:simpleType>
           <xs:restriction base="xs:string">
@@ -235,6 +247,13 @@
   <xs:complexType name="InquiryResponse">
     <xs:sequence>
       <xs:element name="InquiryId">
+        <xs:simpleType>
+          <xs:restriction base="xs:int">
+            <xs:minInclusive value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Round">
         <xs:simpleType>
           <xs:restriction base="xs:int">
             <xs:minInclusive value="1"/>
@@ -345,11 +364,14 @@
       <xs:enumeration value="AssociationBooked"/>
       <xs:enumeration value="Canceled"/>
       <xs:enumeration value="Acknowledged"/>
+      <xs:enumeration value="AutomaticallyAcknowledged"/>
       <xs:enumeration value="AllDeclined"/>
       <xs:enumeration value="AcceptedByAtLeastOne"/>
       <xs:enumeration value="LateCanceled"/>
+      <xs:enumeration value="Rejected"/>
     </xs:restriction>
   </xs:simpleType>
+  <!--OID 1.2.752.129.2.2.1.1-->
   <xs:simpleType name="KV_KÖN">
     <xs:restriction base="xs:string">
       <xs:enumeration value="okänt"/>
