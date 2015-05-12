@@ -368,7 +368,7 @@
       <xs:enumeration value="AllDeclined"/>
       <xs:enumeration value="AcceptedByAtLeastOne"/>
       <xs:enumeration value="LateCanceled"/>
-      <xs:enumeration value="Rejected"/>
+      <xs:enumeration value="Invalid"/>
     </xs:restriction>
   </xs:simpleType>
   <!--OID 1.2.752.129.2.2.1.1-->
