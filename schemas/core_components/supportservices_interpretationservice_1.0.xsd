@@ -44,6 +44,7 @@
   <xs:complexType name="Booking">
     <xs:sequence>
       <xs:element name="Occasion" type="tns:BookingOccasion"/>
+      <xs:element name="AnswerData" type="tns:BookingAnswerData"/>
       <xs:element name="Data" type="tns:BookingData"/>
       <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
@@ -111,11 +112,6 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      <xs:element name="ReferenceNumber" minOccurs="0">
-        <xs:simpleType>
-          <xs:restriction base="xs:string"/>
-        </xs:simpleType>
-      </xs:element>
       <xs:element name="State" type="tns:BookingState"/>
       <xs:element name="StartTime" type="xs:dateTime"/>
       <xs:element name="EndTime">
@@ -123,8 +119,25 @@
           <xs:restriction base="xs:dateTime"/>
         </xs:simpleType>
       </xs:element>
-      <xs:element name="AuthorizationLevel" type="tns:AuthorizationLevel" minOccurs="0"/>
-      <xs:element name="InterpreterName" minOccurs="0">
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="BookingAnswerData">
+    <xs:sequence>
+      <xs:element name="AuthorizationLevel" type="tns:AuthorizationLevel"/>
+      <xs:element name="ReferenceNumber" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="InterpreterName">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="PhoneNumberForInterpretation" minOccurs="0">
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:minLength value="1"/>
