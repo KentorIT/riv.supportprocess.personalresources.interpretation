@@ -30,7 +30,6 @@
       </xs:element>
       <xs:element name="AcknowledgedStartTime" type="xs:dateTime" minOccurs="0"/>
       <xs:element name="AcknowledgedEndTime" type="xs:dateTime" minOccurs="0"/>
-      <xs:element name="Feedback" type="tns:Feedback" minOccurs="0"/>
       <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
@@ -190,18 +189,6 @@
         </xs:simpleType>
       </xs:element>
       <xs:element name="OrderingHealthcareUnitHsaId" type="tns:HSAIdType"/>
-      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="Feedback">
-    <xs:sequence>
-      <xs:element name="InterpreterName" type="xs:string"/>
-      <xs:element name="AuthorizationLevel" type="tns:AuthorizationLevel"/>
-      <xs:element name="InterpretationType" type="tns:InterpretationType"/>
-      <xs:element name="Answer" type="tns:FeedbackAnswerType" minOccurs="0" />
-      <xs:element name="Comment" type="xs:string"/>
-      <xs:element name="FeedbackWithFine" type="tns:FeedbackReasonType" minOccurs="0" maxOccurs="unbounded" />
-      <xs:element name="FeedbackWithoutFine" type="tns:FeedbackReasonType" minOccurs="0" maxOccurs="unbounded" />
       <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
@@ -405,33 +392,6 @@
       <xs:enumeration value="Accept"/>
       <xs:enumeration value="AcceptWithException"/>
       <xs:enumeration value="Reject"/>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:simpleType name="FeedbackReasonType">
-    <xs:restriction base="xs:string">
-      <!--with fine-->
-      <xs:enumeration value="WrongCompetence"/>
-      <xs:enumeration value="WrongGender"/>
-      <xs:enumeration value="WrongNamedInterpreter"/>
-      <xs:enumeration value="NoInterpreter"/>
-      <xs:enumeration value="LateInterpreter15Min"/>
-      <xs:enumeration value="LateInterpreter5Min"/>
-      <xs:enumeration value="RejectedInterpreterWasAssigned"/>
-      <!--without fine-->
-      <xs:enumeration value="NoPhotoId"/>
-      <xs:enumeration value="NotNeutral"/>
-      <xs:enumeration value="NotNiceInterpreter"/>
-      <xs:enumeration value="NotGoodLanguage"/>
-      <xs:enumeration value="CanceledEarly"/>
-      <xs:enumeration value="ConfirmationNotInTime"/>
-      <xs:enumeration value="NoPatient"/>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:simpleType name="FeedbackAnswerType">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="Answered"/>
-      <xs:enumeration value="Accepted"/>
-      <xs:enumeration value="Rejected"/>
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="RequirementLevel">
