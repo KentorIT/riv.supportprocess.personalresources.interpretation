@@ -51,7 +51,7 @@
   </xs:complexType>
   <xs:complexType name="RequiredGenderWithRequirement">
     <xs:sequence>
-      <xs:element name="RequiredGender" type="tns:KV_KÖN" minOccurs="0"/>
+      <xs:element name="RequiredGender" type="tns:Gender" minOccurs="0"/>
       <xs:element name="RequiredLevel" type="tns:RequirementLevel"/>
       <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
@@ -292,7 +292,7 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      <xs:element name="Gender" type="tns:KV_KÖN"/>
+      <xs:element name="Gender" type="tns:Gender"/>
       <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
@@ -361,13 +361,10 @@
       <xs:enumeration value="Invalid"/>
     </xs:restriction>
   </xs:simpleType>
-  <!--OID 1.2.752.129.2.2.1.1-->
-  <xs:simpleType name="KV_KÖN">
+  <xs:simpleType name="Gender">
     <xs:restriction base="xs:string">
-      <xs:enumeration value="okänt"/>
-      <xs:enumeration value="man"/>
-      <xs:enumeration value="kvinna"/>
-      <xs:enumeration value="ej tillämpligt"/>
+      <xs:enumeration value="Male"/>
+      <xs:enumeration value="Female"/>
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="InterpretationType">
