@@ -26,24 +26,21 @@
 	SET W0=%SCHEMADIR%\interactions\AnswerInquiryInteraction\AnswerInquiryInteraction_1.0_RIVTABP21.wsdl
 SET X0=%SCHEMADIR%\interactions\AnswerInquiryInteraction\*.xsd
 
-SET W1=%SCHEMADIR%\interactions\ListAcknowledgementsInteraction\ListAcknowledgementsInteraction_1.0_RIVTABP21.wsdl
-SET X1=%SCHEMADIR%\interactions\ListAcknowledgementsInteraction\*.xsd
+SET W1=%SCHEMADIR%\interactions\ListBookingsInteraction\ListBookingsInteraction_1.0_RIVTABP21.wsdl
+SET X1=%SCHEMADIR%\interactions\ListBookingsInteraction\*.xsd
 
-SET W2=%SCHEMADIR%\interactions\ListBookingsInteraction\ListBookingsInteraction_1.0_RIVTABP21.wsdl
-SET X2=%SCHEMADIR%\interactions\ListBookingsInteraction\*.xsd
+SET W2=%SCHEMADIR%\interactions\ListInquiriesInteraction\ListInquiriesInteraction_1.0_RIVTABP21.wsdl
+SET X2=%SCHEMADIR%\interactions\ListInquiriesInteraction\*.xsd
 
-SET W3=%SCHEMADIR%\interactions\ListInquiriesInteraction\ListInquiriesInteraction_1.0_RIVTABP21.wsdl
-SET X3=%SCHEMADIR%\interactions\ListInquiriesInteraction\*.xsd
+SET W3=%SCHEMADIR%\interactions\ListLanguagesInteraction\ListLanguagesInteraction_1.0_RIVTABP21.wsdl
+SET X3=%SCHEMADIR%\interactions\ListLanguagesInteraction\*.xsd
 
-SET W4=%SCHEMADIR%\interactions\ListLanguagesInteraction\ListLanguagesInteraction_1.0_RIVTABP21.wsdl
-SET X4=%SCHEMADIR%\interactions\ListLanguagesInteraction\*.xsd
-
-SET W5=%SCHEMADIR%\interactions\UpdateBookingInteraction\UpdateBookingInteraction_1.0_RIVTABP21.wsdl
-SET X5=%SCHEMADIR%\interactions\UpdateBookingInteraction\*.xsd
+SET W4=%SCHEMADIR%\interactions\UpdateBookingInteraction\UpdateBookingInteraction_1.0_RIVTABP21.wsdl
+SET X4=%SCHEMADIR%\interactions\UpdateBookingInteraction\*.xsd
 
 SET XCORE=%SCHEMADIR%\core_components\*.xsd
 
-SET SCHEMAS=%XCORE% %W0% %X0% %W1% %X1% %W2% %X2% %W3% %X3% %W4% %X4% %W5% %X5% 
+SET SCHEMAS=%XCORE% %W0% %X0% %W1% %X1% %W2% %X2% %W3% %X3% %W4% %X4% 
 
 SET OUTFILE=code_gen\wcf\generated-src\SupportprocessPersonalresourcesInterpretationInteractions.cs
 SET PRAGMAFILE=code_gen\wcf\generated-src\pragma.cs

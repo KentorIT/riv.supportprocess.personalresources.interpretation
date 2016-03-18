@@ -19,20 +19,6 @@
  -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:supportprocess:personalresources:interpretation:1" targetNamespace="urn:supportprocess:personalresources:interpretation:1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
   <xs:import/>
-  <xs:complexType name="Acknowledgement">
-    <xs:sequence>
-      <xs:element name="BookingNumber">
-        <xs:simpleType>
-          <xs:restriction base="xs:int">
-            <xs:maxInclusive value="0"/>
-          </xs:restriction>
-        </xs:simpleType>
-      </xs:element>
-      <xs:element name="AcknowledgedStartTime" type="xs:dateTime" minOccurs="0"/>
-      <xs:element name="AcknowledgedEndTime" type="xs:dateTime" minOccurs="0"/>
-      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="Booking">
     <xs:sequence>
       <xs:element name="Occasion" type="tns:BookingOccasion"/>
