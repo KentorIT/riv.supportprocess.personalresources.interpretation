@@ -21,13 +21,6 @@
   <xs:import/>
   <xs:complexType name="Acknowledgement">
     <xs:sequence>
-      <xs:element name="AcknowledgementNumber">
-        <xs:simpleType>
-          <xs:restriction base="xs:int">
-            <xs:maxInclusive value="0"/>
-          </xs:restriction>
-        </xs:simpleType>
-      </xs:element>
       <xs:element name="BookingNumber">
         <xs:simpleType>
           <xs:restriction base="xs:int">
@@ -67,7 +60,9 @@
     <xs:sequence>
       <xs:element name="RequiredInterpreterName" minOccurs="0">
         <xs:simpleType>
-          <xs:restriction base="xs:string"/>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+          </xs:restriction>
         </xs:simpleType>
       </xs:element>
       <xs:element name="RequiredLevel" type="tns:RequirementLevel"/>
@@ -79,20 +74,12 @@
       <xs:element name="InterpretationLanguageId" type="xs:string"/>
       <xs:element name="Patient" type="tns:PatientInformation" minOccurs="0" maxOccurs="unbounded"/>
       <xs:element name="AuthorizationLevel" type="tns:AuthorizationLevelWithRequirement"/>
-      <xs:element name="AdditionalRequirements" minOccurs="0" maxOccurs="unbounded">
-        <xs:simpleType>
-          <xs:restriction base="xs:string"/>
-        </xs:simpleType>
-      </xs:element>
+      <xs:element name="AdditionalRequirements" minOccurs="0" maxOccurs="unbounded" type="xs:string"/>
       <xs:element name="InterpretationType" type="tns:InterpretationType"/>
       <xs:element name="ContactInformation" type="tns:ContactInformation"/>
       <xs:element name="InterpreterGender" type="tns:RequiredGenderWithRequirement" minOccurs="0"/>
       <xs:element name="InterpreterName" type="tns:RequiredInterpreterNameWithRequirement" minOccurs="0"/>
-      <xs:element name="AdditionalPatientRequest" minOccurs="0">
-        <xs:simpleType>
-          <xs:restriction base="xs:string"/>
-        </xs:simpleType>
-      </xs:element>
+      <xs:element name="AdditionalPatientRequest" minOccurs="0" type="xs:string" />
       <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
@@ -108,28 +95,20 @@
       <xs:element name="BookingNumber">
         <xs:simpleType>
           <xs:restriction base="xs:int">
-            <xs:maxInclusive value="0"/>
+            <xs:minInclusive value="0"/>
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
       <xs:element name="State" type="tns:BookingState"/>
       <xs:element name="StartTime" type="xs:dateTime"/>
-      <xs:element name="EndTime">
-        <xs:simpleType>
-          <xs:restriction base="xs:dateTime"/>
-        </xs:simpleType>
-      </xs:element>
+      <xs:element name="EndTime" type="xs:dateTime"/>
       <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="BookingAnswerData">
     <xs:sequence>
       <xs:element name="AuthorizationLevel" type="tns:AuthorizationLevel"/>
-      <xs:element name="ReferenceNumber" minOccurs="0">
-        <xs:simpleType>
-          <xs:restriction base="xs:string"/>
-        </xs:simpleType>
-      </xs:element>
+      <xs:element name="ReferenceNumber" minOccurs="0" type="xs:string" />
       <xs:element name="InterpreterName">
         <xs:simpleType>
           <xs:restriction base="xs:string">
@@ -193,14 +172,7 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      <xs:element name="OrderingPersonId">
-        <xs:simpleType>
-          <xs:restriction base="xs:string">
-            <xs:minLength value="1"/>
-            <xs:maxLength value="32"/>
-          </xs:restriction>
-        </xs:simpleType>
-      </xs:element>
+      <xs:element name="OrderingPersonId" type="tns:HSAIdType" />
       <xs:element name="OrderingUnitName">
         <xs:simpleType>
           <xs:restriction base="xs:string">
@@ -328,7 +300,7 @@
       <xs:element name="BookingNumber">
         <xs:simpleType>
           <xs:restriction base="xs:int">
-            <xs:maxInclusive value="0"/>
+            <xs:minInclusive value="0"/>
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
@@ -342,20 +314,16 @@
   </xs:complexType>
   <xs:complexType name="BookingUpdate">
     <xs:sequence>
-      <xs:element name="BookingNumber">
+      <xs:element name="BookingNumber" >
         <xs:simpleType>
           <xs:restriction base="xs:int">
-            <xs:maxInclusive value="0"/>
+            <xs:minInclusive value="0"/>
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      <xs:element name="ReferenceNumber">
-        <xs:simpleType>
-          <xs:restriction base="xs:string"/>
-        </xs:simpleType>
-      </xs:element>
-      <xs:element name="AuthorizationLevel" type="tns:AuthorizationLevel"/>
-      <xs:element name="InterpreterName">
+      <xs:element name="ReferenceNumber" type="xs:string" minOccurs="0" />
+      <xs:element name="AuthorizationLevel" type="tns:AuthorizationLevel" minOccurs="0"/> 
+      <xs:element name="InterpreterName" minOccurs="0">
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:minLength value="1"/>
