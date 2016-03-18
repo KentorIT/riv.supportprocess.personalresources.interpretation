@@ -99,6 +99,7 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
+      <xs:element name="ReferenceNumber" type="xs:string" minOccurs="0"/>
       <xs:element name="State" type="tns:BookingState"/>
       <xs:element name="StartTime" type="xs:dateTime"/>
       <xs:element name="EndTime" type="xs:dateTime"/>
