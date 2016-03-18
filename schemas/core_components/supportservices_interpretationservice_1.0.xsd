@@ -209,6 +209,14 @@
         </xs:simpleType>
       </xs:element>
       <xs:element name="OrderingUnitHsaId" type="tns:HSAIdType"/>
+      <xs:element name="OrderingHealthcareUnitName">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="OrderingHealthcareUnitHsaId" type="tns:HSAIdType"/>
       <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
