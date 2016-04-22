@@ -319,6 +319,7 @@
       <xs:enumeration value="Other"/>
       <xs:enumeration value="Authorized"/>
       <xs:enumeration value="HealthcareAuthorized"/>
+      <xs:enumeration value="Educated"/>
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="BookingState">
