@@ -344,7 +344,7 @@
   <xs:simpleType name="InterpretationType">
     <xs:restriction base="xs:string">
       <xs:enumeration value="Contact"/>
-      <xs:enumeration value="Phone"/>
+      <xs:enumeration value="Remote"/>
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="InquiryState">
