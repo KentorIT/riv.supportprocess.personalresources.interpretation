@@ -62,6 +62,7 @@
       <xs:element name="AdditionalRequirements" minOccurs="0" maxOccurs="unbounded" type="xs:string"/>
       <xs:element name="InterpretationType" type="tns:InterpretationType"/>
       <xs:element name="ContactInformation" type="tns:ContactInformation"/>
+      <xs:element name="TravelTimeCostAllowed" type="xs:boolean"/>
       <xs:element name="InterpreterGender" type="tns:RequiredGenderWithRequirement" minOccurs="0"/>
       <xs:element name="InterpreterName" type="tns:RequiredInterpreterNameWithRequirement" minOccurs="0"/>
       <xs:element name="AdditionalPatientRequest" minOccurs="0" type="xs:string" />
@@ -229,7 +230,8 @@
       </xs:element>
       <xs:element name="ReferenceNumberMap" type="tns:ReferenceNumberMapping" minOccurs="0" maxOccurs="unbounded"/>
       <xs:element name="Answer" type="tns:InquiryResponseAnswer"/>
-      <xs:element name="AuthorizationLevel" type="tns:AuthorizationLevel" minOccurs="0"/>
+      <xs:element name="AuthorizationLevel" type="tns:AuthorizationLevel"/>
+      <xs:element name="RequestTravelTimeCost" type="xs:boolean"/>
       <xs:element name="InterpreterName" minOccurs="0">
         <xs:simpleType>
           <xs:restriction base="xs:string">
@@ -237,7 +239,7 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      <xs:element name="PhonenumberForInterpretation" minOccurs="0">
+      <xs:element name="PhoneNumberForInterpretation" minOccurs="0">
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:minLength value="1"/>
@@ -296,7 +298,8 @@
         </xs:simpleType>
       </xs:element>
       <xs:element name="ReferenceNumber" type="xs:string" minOccurs="0" />
-      <xs:element name="AuthorizationLevel" type="tns:AuthorizationLevel" minOccurs="0"/> 
+      <xs:element name="AuthorizationLevel" type="tns:AuthorizationLevel" /> 
+      <xs:element name="RequestTravelTimeCost" type="xs:boolean" />
       <xs:element name="InterpreterName" minOccurs="0">
         <xs:simpleType>
           <xs:restriction base="xs:string">
@@ -304,7 +307,7 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
-      <xs:element name="PhonenumberForInterpretation" minOccurs="0">
+      <xs:element name="PhoneNumberForInterpretation" minOccurs="0">
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:minLength value="1"/>
