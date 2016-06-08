@@ -317,6 +317,15 @@
       <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="UnitInformation">
+    <xs:sequence>
+      <xs:element name="UnitHsaId" type="tns:HSAIdType"/>
+      <xs:element name="UnitName" type="xs:string"/>
+      <xs:element name="ParentUnit" type="tns:UnitInformation" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--Enum types-->
   <xs:simpleType name="AuthorizationLevel">
     <xs:restriction base="xs:string">
       <xs:enumeration value="Other"/>
