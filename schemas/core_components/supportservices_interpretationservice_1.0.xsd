@@ -95,6 +95,7 @@
   <xs:complexType name="BookingAnswerData">
     <xs:sequence>
       <xs:element name="AuthorizationLevel" type="tns:AuthorizationLevel"/>
+      <xs:element name="RequestTravelTimeCost" type="xs:boolean"/>
       <xs:element name="ReferenceNumber" minOccurs="0" type="xs:string" />
       <xs:element name="InterpreterName">
         <xs:simpleType>
