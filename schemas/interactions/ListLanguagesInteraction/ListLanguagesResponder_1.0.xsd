@@ -29,8 +29,7 @@
   <xs:complexType name="ListLanguagesResponseType">
     <xs:sequence>
       <xs:element name="Languages" type="core:Language" minOccurs="0" maxOccurs="unbounded"/>
-      <xs:element name="ResultCode" type="core:ResultCodeEnum"/>
-      <xs:element name="comment" type="xs:string" minOccurs="0"/>
+      <xs:element name="Result" type="core:ResultType"/>
       <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
