@@ -18,47 +18,47 @@
  under the License.
  -->
 <wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tjsr="urn:supportprocess:personalresources:interpretation:ListLanguagesResponder:1" xmlns:tjsi="urn:supportprocess:personalresources:interpretation:ListLanguagesInitiator:1" xmlns:tns="urn:supportprocess:personalresources:interpretation:ListLanguages:1:rivtabp21" xmlns:itr="urn:riv:itintegration:registry:1" name="ListLanguagesInteraction" targetNamespace="urn:supportprocess:personalresources:interpretation:ListLanguages:1:rivtabp21">
-	<wsdl:types>
-		<xs:schema targetNamespace="urn:supportprocess:personalresources:interpretation:ListLanguages:1:rivtabp21">
-			<xs:import schemaLocation="ListLanguagesResponder_1.0.xsd" namespace="urn:supportprocess:personalresources:interpretation:ListLanguagesResponder:1"/>
-			<xs:import schemaLocation="../../core_components/itintegration_registry_1.0.xsd" namespace="urn:riv:itintegration:registry:1"/>
-		</xs:schema>
-	</wsdl:types>
-	<wsdl:message name="ListLanguagesRequest">
-		<wsdl:part name="LogicalAddress" element="itr:LogicalAddress">
-			<wsdl:documentation>-</wsdl:documentation>
-		</wsdl:part>
-		<wsdl:part name="parameters" element="tjsr:ListLanguages"/>
-	</wsdl:message>
-	<wsdl:message name="ListLanguagesResponse">
-		<wsdl:part name="parameters" element="tjsr:ListLanguagesResponse"/>
-	</wsdl:message>
-	<wsdl:portType name="ListLanguagesResponderInterface">
-		<wsdl:operation name="ListLanguages">
-			<wsdl:input message="tns:ListLanguagesRequest"/>
-			<wsdl:output message="tns:ListLanguagesResponse"/>
-		</wsdl:operation>
-	</wsdl:portType>
-	<wsdl:binding name="ListLanguagesResponderBinding" type="tns:ListLanguagesResponderInterface">
-		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
-		<wsdl:operation name="ListLanguages">
-			<soap:operation soapAction="urn:supportprocess:personalresources:interpretation:ListLanguagesResponder:1:ListLanguages" style="document"/>
-			<wsdl:input>
-				<soap:header message="tns:ListLanguagesRequest" part="LogicalAddress" use="literal"/>
-				<soap:body parts="parameters" use="literal"/>
-			</wsdl:input>
-			<wsdl:output>
-				<soap:body use="literal"/>
-			</wsdl:output>
-		</wsdl:operation>
-	</wsdl:binding>
-	<wsdl:service name="ListLanguagesResponderService">
-		<wsdl:port name="ListLanguagesResponderPort" binding="tns:ListLanguagesResponderBinding">
-			<soap:address location="http://tempuri.org"/>
-		</wsdl:port>
-	</wsdl:service>
-	<xs:annotation>
-		<xs:documentation>
+  <wsdl:types>
+    <xs:schema targetNamespace="urn:supportprocess:personalresources:interpretation:ListLanguages:1:rivtabp21">
+      <xs:import schemaLocation="ListLanguagesResponder_1.0.xsd" namespace="urn:supportprocess:personalresources:interpretation:ListLanguagesResponder:1"/>
+      <xs:import schemaLocation="../../core_components/itintegration_registry_1.0.xsd" namespace="urn:riv:itintegration:registry:1"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="ListLanguagesRequest">
+    <wsdl:part name="LogicalAddress" element="itr:LogicalAddress">
+      <wsdl:documentation>-</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="parameters" element="tjsr:ListLanguages"/>
+  </wsdl:message>
+  <wsdl:message name="ListLanguagesResponse">
+    <wsdl:part name="parameters" element="tjsr:ListLanguagesResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="ListLanguagesResponderInterface">
+    <wsdl:operation name="ListLanguages">
+      <wsdl:input message="tns:ListLanguagesRequest"/>
+      <wsdl:output message="tns:ListLanguagesResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ListLanguagesResponderBinding" type="tns:ListLanguagesResponderInterface">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="ListLanguages">
+      <soap:operation soapAction="urn:supportprocess:personalresources:interpretation:ListLanguagesResponder:1:ListLanguages" style="document"/>
+      <wsdl:input>
+        <soap:header message="tns:ListLanguagesRequest" part="LogicalAddress" use="literal"/>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ListLanguagesResponderService">
+    <wsdl:port name="ListLanguagesResponderPort" binding="tns:ListLanguagesResponderBinding">
+      <soap:address location="http://tempuri.org"/>
+    </wsdl:port>
+  </wsdl:service>
+  <xs:annotation>
+    <xs:documentation>
       Tjänsteinteraktionens namn: ListLanguagesInteraction
       Beskrivning:
       Submission of medical health reports to the Swedish social insurance institutions
@@ -68,5 +68,5 @@
       WS-profil: RIVTABP21
       Förvaltas av: Kentor
     </xs:documentation>
-	</xs:annotation>
+  </xs:annotation>
 </wsdl:definitions>

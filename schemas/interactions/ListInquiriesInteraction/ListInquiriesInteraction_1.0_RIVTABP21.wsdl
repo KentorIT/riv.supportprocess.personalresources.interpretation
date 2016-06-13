@@ -18,55 +18,55 @@
  under the License.
  -->
 <wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tjsr="urn:supportprocess:personalresources:interpretation:ListInquiriesResponder:1" xmlns:tjsi="urn:supportprocess:personalresources:interpretation:ListInquiriesInitiator:1" xmlns:tns="urn:supportprocess:personalresources:interpretation:ListInquiries:1:rivtabp21" xmlns:itr="urn:riv:itintegration:registry:1" name="ListInquiriesInteraction" targetNamespace="urn:supportprocess:personalresources:interpretation:ListInquiries:1:rivtabp21">
-	<wsdl:types>
-		<xs:schema targetNamespace="urn:supportprocess:personalresources:interpretation:ListInquiries:1:rivtabp21">
-			<xs:import schemaLocation="ListInquiriesResponder_1.0.xsd" namespace="urn:supportprocess:personalresources:interpretation:ListInquiriesResponder:1"/>
-			<xs:import schemaLocation="../../core_components/itintegration_registry_1.0.xsd" namespace="urn:riv:itintegration:registry:1"/>
-		</xs:schema>
-	</wsdl:types>
-	<wsdl:message name="ListInquiriesRequest">
-		<wsdl:part name="LogicalAddress" element="itr:LogicalAddress">
-			<wsdl:documentation>-</wsdl:documentation>
-		</wsdl:part>
-		<wsdl:part name="parameters" element="tjsr:ListInquiries"/>
-	</wsdl:message>
-	<wsdl:message name="ListInquiriesResponse">
-		<wsdl:part name="parameters" element="tjsr:ListInquiriesResponse"/>
-	</wsdl:message>
-	<wsdl:portType name="ListInquiriesResponderInterface">
-		<wsdl:operation name="ListInquiries">
-			<wsdl:input message="tns:ListInquiriesRequest"/>
-			<wsdl:output message="tns:ListInquiriesResponse"/>
-		</wsdl:operation>
-	</wsdl:portType>
-	<wsdl:binding name="ListInquiriesResponderBinding" type="tns:ListInquiriesResponderInterface">
-		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
-		<wsdl:operation name="ListInquiries">
-			<soap:operation soapAction="urn:supportprocess:personalresources:interpretation:ListInquiriesResponder:1:ListInquiries" style="document"/>
-			<wsdl:input>
-				<soap:header message="tns:ListInquiriesRequest" part="LogicalAddress" use="literal"/>
-				<soap:body parts="parameters" use="literal"/>
-			</wsdl:input>
-			<wsdl:output>
-				<soap:body use="literal"/>
-			</wsdl:output>
-		</wsdl:operation>
-	</wsdl:binding>
-	<wsdl:service name="ListInquiriesResponderService">
-		<wsdl:port name="ListInquiriesResponderPort" binding="tns:ListInquiriesResponderBinding">
-			<soap:address location="http://tempuri.org"/>
-		</wsdl:port>
-	</wsdl:service>
-	<xs:annotation>
-		<xs:documentation>
-			 Tjänsteinteraktionens namn: ListInquiriesInteraction
-			 Beskrivning: 
-			   Submission of medical health reports to the Swedish social insurance institutions
-			 Revisioner: 
-			 Tjänstedomän: supportservices:interpretationservice
-			 Tjänsteinteraktionstyp: Fråga-Svar
-			 WS-profil: RIVTABP21
-			 Förvaltas av: Kentor
-			 </xs:documentation>
-	</xs:annotation>
+  <wsdl:types>
+    <xs:schema targetNamespace="urn:supportprocess:personalresources:interpretation:ListInquiries:1:rivtabp21">
+      <xs:import schemaLocation="ListInquiriesResponder_1.0.xsd" namespace="urn:supportprocess:personalresources:interpretation:ListInquiriesResponder:1"/>
+      <xs:import schemaLocation="../../core_components/itintegration_registry_1.0.xsd" namespace="urn:riv:itintegration:registry:1"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="ListInquiriesRequest">
+    <wsdl:part name="LogicalAddress" element="itr:LogicalAddress">
+      <wsdl:documentation>-</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="parameters" element="tjsr:ListInquiries"/>
+  </wsdl:message>
+  <wsdl:message name="ListInquiriesResponse">
+    <wsdl:part name="parameters" element="tjsr:ListInquiriesResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="ListInquiriesResponderInterface">
+    <wsdl:operation name="ListInquiries">
+      <wsdl:input message="tns:ListInquiriesRequest"/>
+      <wsdl:output message="tns:ListInquiriesResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ListInquiriesResponderBinding" type="tns:ListInquiriesResponderInterface">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="ListInquiries">
+      <soap:operation soapAction="urn:supportprocess:personalresources:interpretation:ListInquiriesResponder:1:ListInquiries" style="document"/>
+      <wsdl:input>
+        <soap:header message="tns:ListInquiriesRequest" part="LogicalAddress" use="literal"/>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ListInquiriesResponderService">
+    <wsdl:port name="ListInquiriesResponderPort" binding="tns:ListInquiriesResponderBinding">
+      <soap:address location="http://tempuri.org"/>
+    </wsdl:port>
+  </wsdl:service>
+  <xs:annotation>
+    <xs:documentation>
+      Tjänsteinteraktionens namn: ListInquiriesInteraction
+      Beskrivning:
+      Submission of medical health reports to the Swedish social insurance institutions
+      Revisioner:
+      Tjänstedomän: supportservices:interpretationservice
+      Tjänsteinteraktionstyp: Fråga-Svar
+      WS-profil: RIVTABP21
+      Förvaltas av: Kentor
+    </xs:documentation>
+  </xs:annotation>
 </wsdl:definitions>

@@ -18,23 +18,23 @@
  under the License.
  -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:supportprocess:personalresources:interpretation:ListInquiriesResponder:1" xmlns:core="urn:supportprocess:personalresources:interpretation:1" targetNamespace="urn:supportprocess:personalresources:interpretation:ListInquiriesResponder:1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
-	<xs:import namespace="urn:supportprocess:personalresources:interpretation:1" schemaLocation="../../core_components/supportservices_interpretationservice_1.0.xsd"/>
-	<xs:element name="ListInquiries" type="tns:ListInquiriesType"/>
-	<xs:element name="ListInquiriesResponse" type="tns:ListInquiriesResponseType"/>
-	<xs:complexType name="ListInquiriesType">
-		<xs:sequence>
-			<xs:element name="LastSequenceNumber" type="core:MessageSequenceNumber"/>
-			<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
-		</xs:sequence>
-	</xs:complexType>
-	<xs:complexType name="ListInquiriesResponseType">
-		<xs:sequence>
-			<xs:element name="Inquiries" type="core:Inquiry" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element name="LastSequenceNumber" type="core:MessageSequenceNumber"/>
-			<xs:element name="HasMoreEntries" type="xs:boolean"/>
-			<xs:element name="ResultCode" type="core:ResultCodeEnum"/>
-			<xs:element name="comment" type="xs:string" minOccurs="0"/>
-			<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
-		</xs:sequence>
-	</xs:complexType>
+  <xs:import namespace="urn:supportprocess:personalresources:interpretation:1" schemaLocation="../../core_components/supportservices_interpretationservice_1.0.xsd"/>
+  <xs:element name="ListInquiries" type="tns:ListInquiriesType"/>
+  <xs:element name="ListInquiriesResponse" type="tns:ListInquiriesResponseType"/>
+  <xs:complexType name="ListInquiriesType">
+    <xs:sequence>
+      <xs:element name="LastSequenceNumber" type="core:MessageSequenceNumber"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListInquiriesResponseType">
+    <xs:sequence>
+      <xs:element name="Inquiries" type="core:Inquiry" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="LastSequenceNumber" type="core:MessageSequenceNumber"/>
+      <xs:element name="HasMoreEntries" type="xs:boolean"/>
+      <xs:element name="ResultCode" type="core:ResultCodeEnum"/>
+      <xs:element name="comment" type="xs:string" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
 </xs:schema>

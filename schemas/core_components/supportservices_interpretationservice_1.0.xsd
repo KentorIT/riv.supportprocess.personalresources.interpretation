@@ -300,7 +300,7 @@
         </xs:simpleType>
       </xs:element>
       <xs:element name="ReferenceNumber" type="xs:string" minOccurs="0" />
-      <xs:element name="AuthorizationLevel" type="tns:AuthorizationLevel" /> 
+      <xs:element name="AuthorizationLevel" type="tns:AuthorizationLevel" />
       <xs:element name="RequestTravelTimeCost" type="xs:boolean" />
       <xs:element name="InterpreterName" minOccurs="0">
         <xs:simpleType>

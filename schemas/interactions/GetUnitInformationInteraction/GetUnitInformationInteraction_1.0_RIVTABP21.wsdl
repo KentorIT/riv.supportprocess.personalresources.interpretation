@@ -18,55 +18,55 @@
  under the License.
  -->
 <wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tjsr="urn:supportprocess:personalresources:interpretation:GetUnitInformationResponder:1" xmlns:tjsi="urn:supportprocess:personalresources:interpretation:GetUnitInformationInitiator:1" xmlns:tns="urn:supportprocess:personalresources:interpretation:GetUnitInformation:1:rivtabp21" xmlns:itr="urn:riv:itintegration:registry:1" xmlns:ns="urn:supportprocess:personalresources:interpretation:1" name="GetUnitInformationInteraction" targetNamespace="urn:supportprocess:personalresources:interpretation:GetUnitInformation:1:rivtabp21">
-	<wsdl:types>
-		<xs:schema targetNamespace="urn:supportprocess:personalresources:interpretation:GetUnitInformation:1:rivtabp21">
-			<xs:import schemaLocation="GetUnitInformationResponder_1.0.xsd" namespace="urn:supportprocess:personalresources:interpretation:GetUnitInformationResponder:1"/>
-			<xs:import schemaLocation="../../core_components/itintegration_registry_1.0.xsd" namespace="urn:riv:itintegration:registry:1"/>
-		</xs:schema>
-	</wsdl:types>
-	<wsdl:message name="GetUnitInformationRequest">
-		<wsdl:part name="LogicalAddress" element="itr:LogicalAddress">
-			<wsdl:documentation>-</wsdl:documentation>
-		</wsdl:part>
-		<wsdl:part name="parameters" element="tjsr:GetUnitInformation"/>
-	</wsdl:message>
-	<wsdl:message name="GetUnitInformationResponse">
-		<wsdl:part name="parameters" element="tjsr:GetUnitInformationResponse"/>
-	</wsdl:message>
-	<wsdl:portType name="GetUnitInformationResponderInterface">
-		<wsdl:operation name="GetUnitInformation">
-			<wsdl:input message="tns:GetUnitInformationRequest"/>
-			<wsdl:output message="tns:GetUnitInformationResponse"/>
-		</wsdl:operation>
-	</wsdl:portType>
-	<wsdl:binding name="GetUnitInformationResponderBinding" type="tns:GetUnitInformationResponderInterface">
-		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
-		<wsdl:operation name="GetUnitInformation">
-			<soap:operation soapAction="urn:supportprocess:personalresources:interpretation:GetUnitInformationResponder:1:GetUnitInformation" style="document"/>
-			<wsdl:input>
-				<soap:header message="tns:GetUnitInformationRequest" part="LogicalAddress" use="literal"/>
-				<soap:body parts="parameters" use="literal"/>
-			</wsdl:input>
-			<wsdl:output>
-				<soap:body use="literal"/>
-			</wsdl:output>
-		</wsdl:operation>
-	</wsdl:binding>
-	<wsdl:service name="GetUnitInformationResponderService">
-		<wsdl:port name="GetUnitInformationResponderPort" binding="tns:GetUnitInformationResponderBinding">
-			<soap:address location="http://tempuri.org"/>
-		</wsdl:port>
-	</wsdl:service>
-	<xs:annotation>
-		<xs:documentation>
-			 Tjänsteinteraktionens namn: GetUnitInformationInteraction
-			 Beskrivning: 
-			   Hämtning av enhetsinformation
-			 Revisioner: 
-			 Tjänstedomän: supportservices:interpretationservice
-			 Tjänsteinteraktionstyp: Fråga-Svar
-			 WS-profil: RIVTABP21
-			 Förvaltas av: Kentor
-			 </xs:documentation>
-	</xs:annotation>
+  <wsdl:types>
+    <xs:schema targetNamespace="urn:supportprocess:personalresources:interpretation:GetUnitInformation:1:rivtabp21">
+      <xs:import schemaLocation="GetUnitInformationResponder_1.0.xsd" namespace="urn:supportprocess:personalresources:interpretation:GetUnitInformationResponder:1"/>
+      <xs:import schemaLocation="../../core_components/itintegration_registry_1.0.xsd" namespace="urn:riv:itintegration:registry:1"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="GetUnitInformationRequest">
+    <wsdl:part name="LogicalAddress" element="itr:LogicalAddress">
+      <wsdl:documentation>-</wsdl:documentation>
+    </wsdl:part>
+    <wsdl:part name="parameters" element="tjsr:GetUnitInformation"/>
+  </wsdl:message>
+  <wsdl:message name="GetUnitInformationResponse">
+    <wsdl:part name="parameters" element="tjsr:GetUnitInformationResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="GetUnitInformationResponderInterface">
+    <wsdl:operation name="GetUnitInformation">
+      <wsdl:input message="tns:GetUnitInformationRequest"/>
+      <wsdl:output message="tns:GetUnitInformationResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GetUnitInformationResponderBinding" type="tns:GetUnitInformationResponderInterface">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetUnitInformation">
+      <soap:operation soapAction="urn:supportprocess:personalresources:interpretation:GetUnitInformationResponder:1:GetUnitInformation" style="document"/>
+      <wsdl:input>
+        <soap:header message="tns:GetUnitInformationRequest" part="LogicalAddress" use="literal"/>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GetUnitInformationResponderService">
+    <wsdl:port name="GetUnitInformationResponderPort" binding="tns:GetUnitInformationResponderBinding">
+      <soap:address location="http://tempuri.org"/>
+    </wsdl:port>
+  </wsdl:service>
+  <xs:annotation>
+    <xs:documentation>
+      Tjänsteinteraktionens namn: GetUnitInformationInteraction
+      Beskrivning:
+      Hämtning av enhetsinformation
+      Revisioner:
+      Tjänstedomän: supportservices:interpretationservice
+      Tjänsteinteraktionstyp: Fråga-Svar
+      WS-profil: RIVTABP21
+      Förvaltas av: Kentor
+    </xs:documentation>
+  </xs:annotation>
 </wsdl:definitions>
