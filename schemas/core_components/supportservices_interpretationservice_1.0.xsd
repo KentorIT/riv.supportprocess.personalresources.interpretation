@@ -95,9 +95,15 @@
   </xs:complexType>
   <xs:complexType name="BookingAnswerData">
     <xs:sequence>
+      <xs:element name="ReferenceNumber" minOccurs="0" type="xs:string" />
+      <xs:element name="BookingInformationFromAssociation" type="tns:BookingInformationFromAssociation" />
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="BookingInformationFromAssociation">
+    <xs:sequence>
       <xs:element name="AuthorizationLevel" type="tns:AuthorizationLevel"/>
       <xs:element name="RequestTravelTimeCost" type="xs:boolean"/>
-      <xs:element name="ReferenceNumber" minOccurs="0" type="xs:string" />
       <xs:element name="InterpreterName">
         <xs:simpleType>
           <xs:restriction base="xs:string">
@@ -232,22 +238,7 @@
       </xs:element>
       <xs:element name="ReferenceNumberMap" type="tns:ReferenceNumberMapping" minOccurs="0" maxOccurs="unbounded"/>
       <xs:element name="Answer" type="tns:InquiryResponseAnswer"/>
-      <xs:element name="AuthorizationLevel" type="tns:AuthorizationLevel"/>
-      <xs:element name="RequestTravelTimeCost" type="xs:boolean"/>
-      <xs:element name="InterpreterName" minOccurs="0">
-        <xs:simpleType>
-          <xs:restriction base="xs:string">
-            <xs:minLength value="1"/>
-          </xs:restriction>
-        </xs:simpleType>
-      </xs:element>
-      <xs:element name="PhoneNumberForInterpretation" minOccurs="0">
-        <xs:simpleType>
-          <xs:restriction base="xs:string">
-            <xs:minLength value="1"/>
-          </xs:restriction>
-        </xs:simpleType>
-      </xs:element>
+      <xs:element name="BookingInformationFromAssociation" type="tns:BookingInformationFromAssociation" />
       <xs:element name="ExplainingText" type="xs:string" minOccurs="0"/>
       <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
@@ -300,22 +291,7 @@
         </xs:simpleType>
       </xs:element>
       <xs:element name="ReferenceNumber" type="xs:string" minOccurs="0" />
-      <xs:element name="AuthorizationLevel" type="tns:AuthorizationLevel" />
-      <xs:element name="RequestTravelTimeCost" type="xs:boolean" />
-      <xs:element name="InterpreterName" minOccurs="0">
-        <xs:simpleType>
-          <xs:restriction base="xs:string">
-            <xs:minLength value="1"/>
-          </xs:restriction>
-        </xs:simpleType>
-      </xs:element>
-      <xs:element name="PhoneNumberForInterpretation" minOccurs="0">
-        <xs:simpleType>
-          <xs:restriction base="xs:string">
-            <xs:minLength value="1"/>
-          </xs:restriction>
-        </xs:simpleType>
-      </xs:element>
+      <xs:element name="BookingInformationFromAssociation" type="tns:BookingInformationFromAssociation" />
       <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
