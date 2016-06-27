@@ -24,6 +24,7 @@
   <xs:complexType name="UpdateBookingType">
     <xs:sequence>
       <xs:element name="BookingUpdate" type="core:BookingUpdate"/>
+      <xs:element name="Authentication" type="core:UserNamePasswordAuthentication" minOccurs="0"/>
       <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>

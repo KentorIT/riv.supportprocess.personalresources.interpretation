@@ -24,6 +24,7 @@
   <xs:complexType name="AnswerInquiryType">
     <xs:sequence>
       <xs:element name="InquiryResponse" type="core:InquiryResponse"/>
+      <xs:element name="Authentication" type="core:UserNamePasswordAuthentication" minOccurs="0"/>
       <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
