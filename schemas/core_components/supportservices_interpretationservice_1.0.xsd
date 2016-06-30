@@ -366,6 +366,7 @@
   </xs:simpleType>
   <xs:simpleType name="ErrorCodeEnum">
     <xs:restriction base="xs:string">
+      <xs:enumeration value="UNSPECIFIED"/>
       <xs:enumeration value="INTERNAL_ERROR"/>
       <xs:enumeration value="AUTHENTICATION_ERROR"/>
       <xs:enumeration value="DEPRECATED_OR_UNAVAILABLE"/>
