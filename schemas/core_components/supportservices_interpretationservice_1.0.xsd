@@ -130,7 +130,7 @@
           </xs:restriction>
         </xs:simpleType>
       </xs:element>
-	  <xs:element name="ChangedAddress" minOccurs="0" type="xs:boolean" />
+      <xs:element name="ChangedAddress" minOccurs="0" type="xs:boolean" />
       <xs:element name="DoorCode" minOccurs="0" type="xs:string"/>
       <xs:element name="LocationDetails" minOccurs="0" type="xs:string"/>
       <xs:element name="LocationName">
