@@ -17,9 +17,19 @@
  specific language governing permissions and limitations
  under the License.
  -->
-<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tjsr="urn:supportprocess:personalresources:interpretation:AnswerInquiryResponder:1" xmlns:tjsi="urn:supportprocess:personalresources:interpretation:AnswerInquiryInitiator:1" xmlns:tns="urn:supportprocess:personalresources:interpretation:AnswerInquiry:1:rivtabp21" xmlns:itr="urn:riv:itintegration:registry:1" name="AnswerInquiryInteraction" targetNamespace="urn:supportprocess:personalresources:interpretation:AnswerInquiry:1:rivtabp21">
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tjsr="urn:supportprocess:personalresources:interpretation:AnswerInquiryResponder:1" xmlns:tjsi="urn:supportprocess:personalresources:interpretation:AnswerInquiryInitiator:1" xmlns:tns="urn:supportprocess:personalresources:interpretation:AnswerInquiry:1:rivtabp21" xmlns:itr="urn:riv:itintegration:registry:1" name="AnswerInquiryInteraction" targetNamespace="urn:riv:supportprocess:personalresources:interpretation:AnswerInquiry:1:rivtabp21">
+  <wsdl:documentation>
+    Tjänsteinteraktionens namn: AnswerInquiryInteraction
+    Beskrivning:
+    Submission of medical health reports to the Swedish social insurance institutions
+    Revisioner:
+    Tjänstedomän: supportservices:interpretationservice
+    Tjänsteinteraktionstyp: Fråga-Svar
+    WS-profil: RIVTABP21
+    Förvaltas av: Kentor
+  </wsdl:documentation>
   <wsdl:types>
-    <xs:schema targetNamespace="urn:supportprocess:personalresources:interpretation:AnswerInquiry:1:rivtabp21">
+    <xs:schema targetNamespace="urn:riv:supportprocess:personalresources:interpretation:AnswerInquiry:1:rivtabp21">
       <xs:import schemaLocation="AnswerInquiryResponder_1.0.xsd" namespace="urn:supportprocess:personalresources:interpretation:AnswerInquiryResponder:1"/>
       <xs:import schemaLocation="../../core_components/itintegration_registry_1.0.xsd" namespace="urn:riv:itintegration:registry:1"/>
     </xs:schema>
@@ -42,7 +52,7 @@
   <wsdl:binding name="AnswerInquiryResponderBinding" type="tns:AnswerInquiryResponderInterface">
     <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
     <wsdl:operation name="AnswerInquiry">
-      <soap:operation soapAction="urn:supportprocess:personalresources:interpretation:AnswerInquiryResponder:1:AnswerInquiry" style="document"/>
+      <soap:operation soapAction="urn:riv:supportprocess:personalresources:interpretation:AnswerInquiryResponder:1:AnswerInquiry" style="document"/>
       <wsdl:input>
         <soap:header message="tns:AnswerInquiryRequest" part="LogicalAddress" use="literal"/>
         <soap:body parts="parameters" use="literal"/>
@@ -57,16 +67,4 @@
       <soap:address location="http://tempuri.org"/>
     </wsdl:port>
   </wsdl:service>
-  <xs:annotation>
-    <xs:documentation>
-      Tjänsteinteraktionens namn: AnswerInquiryInteraction
-      Beskrivning:
-      Submission of medical health reports to the Swedish social insurance institutions
-      Revisioner:
-      Tjänstedomän: supportservices:interpretationservice
-      Tjänsteinteraktionstyp: Fråga-Svar
-      WS-profil: RIVTABP21
-      Förvaltas av: Kentor
-    </xs:documentation>
-  </xs:annotation>
 </wsdl:definitions>

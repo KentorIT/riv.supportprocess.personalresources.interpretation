@@ -17,7 +17,7 @@
  specific language governing permissions and limitations
  under the License.
  -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:supportprocess:personalresources:interpretation:AnswerInquiryResponder:1" xmlns:core="urn:supportprocess:personalresources:interpretation:1" targetNamespace="urn:supportprocess:personalresources:interpretation:AnswerInquiryResponder:1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:supportprocess:personalresources:interpretation:AnswerInquiryResponder:1" xmlns:core="urn:supportprocess:personalresources:interpretation:1" targetNamespace="urn:riv:supportprocess:personalresources:interpretation:AnswerInquiryResponder:1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
   <xs:import namespace="urn:supportprocess:personalresources:interpretation:1" schemaLocation="../../core_components/supportservices_interpretationservice_1.0.xsd"/>
   <xs:element name="AnswerInquiry" type="tns:AnswerInquiryType"/>
   <xs:element name="AnswerInquiryResponse" type="tns:AnswerInquiryResponseType"/>
