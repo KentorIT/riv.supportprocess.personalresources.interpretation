@@ -17,20 +17,20 @@
  specific language governing permissions and limitations
  under the License.
  -->
-<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tjsr="urn:supportprocess:personalresources:interpretation:UpdateBookingResponder:1" xmlns:tjsi="urn:supportprocess:personalresources:interpretation:UpdateBookingInitiator:1" xmlns:tns="urn:supportprocess:personalresources:interpretation:UpdateBooking:1:rivtabp21" xmlns:itr="urn:riv:itintegration:registry:1" xmlns:ns="urn:supportprocess:personalresources:interpretation:1" name="UpdateBookingInteraction" targetNamespace="urn:riv:supportprocess:personalresources:interpretation:UpdateBooking:1:rivtabp21">
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tjsr="urn:riv:supportprocess:personalresources:interpretation:UpdateBookingResponder:1" xmlns:tjsi="urn:riv:supportprocess:personalresources:interpretation:UpdateBookingInitiator:1" xmlns:tns="urn:riv:supportprocess:personalresources:interpretation:UpdateBooking:1:rivtabp21" xmlns:itr="urn:riv:itintegration:registry:1" xmlns:ns="urn:riv:supportprocess:personalresources:interpretation:1" name="UpdateBookingInteraction" targetNamespace="urn:riv:supportprocess:personalresources:interpretation:UpdateBooking:1:rivtabp21">
   <wsdl:documentation>
     Tjänsteinteraktionens namn: UpdateBookingInteraction
     Beskrivning:
-    Updating of interpretation bookings
+        Interaction to update a interpretation booking that belongs to the association.
     Revisioner:
-    Tjänstedomän: supportservices:interpretationservice
+    Tjänstedomän: supportprocess:personalresources:interpretation
     Tjänsteinteraktionstyp: Fråga-Svar
     WS-profil: RIVTABP21
     Förvaltas av: Kentor
   </wsdl:documentation>
   <wsdl:types>
     <xs:schema targetNamespace="urn:riv:supportprocess:personalresources:interpretation:UpdateBooking:1:rivtabp21">
-      <xs:import schemaLocation="UpdateBookingResponder_1.0.xsd" namespace="urn:supportprocess:personalresources:interpretation:UpdateBookingResponder:1"/>
+      <xs:import schemaLocation="UpdateBookingResponder_1.0.xsd" namespace="urn:riv:supportprocess:personalresources:interpretation:UpdateBookingResponder:1"/>
       <xs:import schemaLocation="../../core_components/itintegration_registry_1.0.xsd" namespace="urn:riv:itintegration:registry:1"/>
     </xs:schema>
   </wsdl:types>

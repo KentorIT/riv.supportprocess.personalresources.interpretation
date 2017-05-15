@@ -17,20 +17,20 @@
  specific language governing permissions and limitations
  under the License.
  -->
-<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tjsr="urn:supportprocess:personalresources:interpretation:GetUnitInformationResponder:1" xmlns:tjsi="urn:supportprocess:personalresources:interpretation:GetUnitInformationInitiator:1" xmlns:tns="urn:supportprocess:personalresources:interpretation:GetUnitInformation:1:rivtabp21" xmlns:itr="urn:riv:itintegration:registry:1" xmlns:ns="urn:supportprocess:personalresources:interpretation:1" name="GetUnitInformationInteraction" targetNamespace="urn:riv:supportprocess:personalresources:interpretation:GetUnitInformation:1:rivtabp21">
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tjsr="urn:riv:supportprocess:personalresources:interpretation:GetUnitInformationResponder:1" xmlns:tjsi="urn:riv:supportprocess:personalresources:interpretation:GetUnitInformationInitiator:1" xmlns:tns="urn:riv:supportprocess:personalresources:interpretation:GetUnitInformation:1:rivtabp21" xmlns:itr="urn:riv:itintegration:registry:1" xmlns:ns="urn:riv:supportprocess:personalresources:interpretation:1" name="GetUnitInformationInteraction" targetNamespace="urn:riv:supportprocess:personalresources:interpretation:GetUnitInformation:1:rivtabp21">
   <wsdl:documentation>
     Tjänsteinteraktionens namn: GetUnitInformationInteraction
     Beskrivning:
-    Hämtning av enhetsinformation
+        Interaction to retrieve information about a unit such as name and address in order to know the location of said unit.
     Revisioner:
-    Tjänstedomän: supportservices:interpretationservice
+    Tjänstedomän: supportprocess:personalresources:interpretation
     Tjänsteinteraktionstyp: Fråga-Svar
     WS-profil: RIVTABP21
     Förvaltas av: Kentor
   </wsdl:documentation>
   <wsdl:types>
     <xs:schema targetNamespace="urn:riv:supportprocess:personalresources:interpretation:GetUnitInformation:1:rivtabp21">
-      <xs:import schemaLocation="GetUnitInformationResponder_1.0.xsd" namespace="urn:supportprocess:personalresources:interpretation:GetUnitInformationResponder:1"/>
+      <xs:import schemaLocation="GetUnitInformationResponder_1.0.xsd" namespace="urn:riv:supportprocess:personalresources:interpretation:GetUnitInformationResponder:1"/>
       <xs:import schemaLocation="../../core_components/itintegration_registry_1.0.xsd" namespace="urn:riv:itintegration:registry:1"/>
     </xs:schema>
   </wsdl:types>

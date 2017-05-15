@@ -17,7 +17,7 @@
  specific language governing permissions and limitations
  under the License.
  -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:supportprocess:personalresources:interpretation:1" targetNamespace="urn:supportprocess:personalresources:interpretation:1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:riv:supportprocess:personalresources:interpretation:1" targetNamespace="urn:riv:supportprocess:personalresources:interpretation:1" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
   <xs:import/>
   <xs:complexType name="Booking">
     <xs:sequence>

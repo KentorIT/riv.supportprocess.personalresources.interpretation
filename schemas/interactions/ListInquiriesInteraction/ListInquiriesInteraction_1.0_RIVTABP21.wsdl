@@ -17,20 +17,20 @@
  specific language governing permissions and limitations
  under the License.
  -->
-<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tjsr="urn:supportprocess:personalresources:interpretation:ListInquiriesResponder:1" xmlns:tjsi="urn:supportprocess:personalresources:interpretation:ListInquiriesInitiator:1" xmlns:tns="urn:supportprocess:personalresources:interpretation:ListInquiries:1:rivtabp21" xmlns:itr="urn:riv:itintegration:registry:1" name="ListInquiriesInteraction" targetNamespace="urn:riv:supportprocess:personalresources:interpretation:ListInquiries:1:rivtabp21">
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tjsr="urn:riv:supportprocess:personalresources:interpretation:ListInquiriesResponder:1" xmlns:tjsi="urn:riv:supportprocess:personalresources:interpretation:ListInquiriesInitiator:1" xmlns:tns="urn:riv:supportprocess:personalresources:interpretation:ListInquiries:1:rivtabp21" xmlns:itr="urn:riv:itintegration:registry:1" name="ListInquiriesInteraction" targetNamespace="urn:riv:supportprocess:personalresources:interpretation:ListInquiries:1:rivtabp21">
   <wsdl:documentation>
     Tjänsteinteraktionens namn: ListInquiriesInteraction
     Beskrivning:
-    Submission of medical health reports to the Swedish social insurance institutions
+        Interaction to retrieve a list of inquiries that the association can accept or deny.
     Revisioner:
-    Tjänstedomän: supportservices:interpretationservice
+    Tjänstedomän: supportprocess:personalresources:interpretation
     Tjänsteinteraktionstyp: Fråga-Svar
     WS-profil: RIVTABP21
     Förvaltas av: Kentor
   </wsdl:documentation>
   <wsdl:types>
     <xs:schema targetNamespace="urn:riv:supportprocess:personalresources:interpretation:ListInquiries:1:rivtabp21">
-      <xs:import schemaLocation="ListInquiriesResponder_1.0.xsd" namespace="urn:supportprocess:personalresources:interpretation:ListInquiriesResponder:1"/>
+      <xs:import schemaLocation="ListInquiriesResponder_1.0.xsd" namespace="urn:riv:supportprocess:personalresources:interpretation:ListInquiriesResponder:1"/>
       <xs:import schemaLocation="../../core_components/itintegration_registry_1.0.xsd" namespace="urn:riv:itintegration:registry:1"/>
     </xs:schema>
   </wsdl:types>
