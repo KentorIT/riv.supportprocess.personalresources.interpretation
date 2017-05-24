@@ -58,6 +58,7 @@
   <xs:complexType name="BookingData">
     <xs:sequence>
       <xs:element name="InterpretationLanguageId" type="xs:string"/>
+      <xs:element name="InterpretationSecondaryLanguageId" minOccurs="0" type="xs:string" />
       <xs:element name="Patient" type="tns:PatientInformation" minOccurs="0" maxOccurs="unbounded"/>
       <xs:element name="AuthorizationLevel" type="tns:AuthorizationLevelWithRequirement"/>
       <xs:element name="AdditionalRequirements" minOccurs="0" maxOccurs="unbounded" type="xs:string"/>
